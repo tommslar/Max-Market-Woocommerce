@@ -31,6 +31,15 @@ get_header(); ?>
 			 */
 			do_action( 'homepage' ); ?>
 
+			<?php /** Modifico el template para agregar el form y el mapa */ ?>
+
+			<h1>Contacto:</h1>
+			<?php echo do_shortcode( '[pirate_forms]' ) ?>
+			</br>
+			<h1>Nuestras sucursales:</h1>
+			<?php echo do_shortcode( '[wpgmza id="1"]' ) ?>
+			
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 <?php

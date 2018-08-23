@@ -558,11 +558,11 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 		if ( storefront_is_woocommerce_activated() ) {
 
 			$args = apply_filters( 'storefront_product_categories_args', array(
-				'limit' 			=> 3,
-				'columns' 			=> 3,
+				'limit' 			=> 4, // editado, valor original: 3
+				'columns' 			=> 4, // editado, valor original: 3
 				'child_categories' 	=> 0,
 				'orderby' 			=> 'name',
-				'title'				=> __( 'Shop by Category', 'storefront' ),
+				'title'				=> __( 'Comprar por categoria', 'storefront' ), // editado, valor original: title en ingles
 			) );
 
 			$shortcode_content = storefront_do_shortcode( 'product_categories', apply_filters( 'storefront_product_categories_shortcode_args', array(
@@ -610,11 +610,11 @@ if ( ! function_exists( 'storefront_recent_products' ) ) {
 		if ( storefront_is_woocommerce_activated() ) {
 
 			$args = apply_filters( 'storefront_recent_products_args', array(
-				'limit'   => 4,
-				'columns' => 4,
+				'limit'   => 3,
+				'columns' => 3,
 				'orderby' => 'date',
 				'order'   => 'desc',
-				'title'   => __( 'New In', 'storefront' ),
+				'title'   => __( 'Nuevos productos', 'storefront' ),
 			) );
 
 			$shortcode_content = storefront_do_shortcode( 'products', apply_filters( 'storefront_recent_products_shortcode_args', array(
@@ -667,7 +667,7 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 				'orderby'    => 'date',
 				'order'      => 'desc',
 				'visibility' => 'featured',
-				'title'      => __( 'We Recommend', 'storefront' ),
+				'title'      => __( 'Recomendados', 'storefront' ),
 			) );
 
 			$shortcode_content = storefront_do_shortcode( 'products', apply_filters( 'storefront_featured_products_shortcode_args', array(
@@ -720,7 +720,7 @@ if ( ! function_exists( 'storefront_popular_products' ) ) {
 				'columns' => 4,
 				'orderby' => 'rating',
 				'order'   => 'desc',
-				'title'   => __( 'Fan Favorites', 'storefront' ),
+				'title'   => __( 'Favoritos de nuestros clientes', 'storefront' ),
 			) );
 
 			$shortcode_content = storefront_do_shortcode( 'products', apply_filters( 'storefront_popular_products_shortcode_args', array(
@@ -773,7 +773,7 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 				'orderby' => 'date',
 				'order'   => 'desc',
 				'on_sale' => 'true',
-				'title'   => __( 'On Sale', 'storefront' ),
+				'title'   => __( 'En promoción', 'storefront' ),
 			) );
 
 			$shortcode_content = storefront_do_shortcode( 'products', apply_filters( 'storefront_on_sale_products_shortcode_args', array(
