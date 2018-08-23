@@ -1,0 +1,1 @@
+"# supermercados-max"  initgit add README.mdgit commit -m "first commit"git remote add origin https://github.com/tommslar/supermercados-max.gitgit push -u origin master
